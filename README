@@ -1,0 +1,55 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2199
+
+Screenshot:
+  English: http://photozou.jp/photo/photo_only/175590/10747826
+  Japanese: http://photozou.jp/photo/photo_only/175590/10747824
+
+Description in Japanese:
+  http://vim.g.hatena.ne.jp/keyword/gauref.vim 
+
+Description: ---------------------------------------------------------- {{{1
+  Gauref provides interfaces to look up a keyword in a reference manual of
+  Gauche which is an R5RS Scheme implementation.
+                                                                             
+  You can look up a keyword:
+    - command-line with completion.
+    - under the cursor in Normal mode.
+    - selected in Visual mode.
+                                                                             
+  In the buffer of reference manual, folds for every section/entry are
+  created and closed by default. You can open a closed fold by looking up
+  it.
+                                                                             
+  gauche-refe.txt and gauche-refj.txt are Gauche reference manuals of
+  English and Japanese version which are converted texi files inluded Gauche
+  package.
+                                                                             
+Installation: --------------------------------------------------------- {{{1
+  - Drop this file in your plugin directory.
+  - Drop gauche-refe.txt in ~/.vim/. You can change location by
+    g:gauref_file option. (To see japanese manual, use gauche-refj.txt)
+                                                                             
+Usage: ---------------------------------------------------------------- {{{1
+  You can look up keywords by command/mapping.
+                                                                             
+  Command:
+    :Gauref {keyword}
+      looks up {keyword}. You can use command-line completion.
+                                                                             
+  Mapping:
+    "K"
+      looks up the keyword under the cursor in Normal mode, or selected
+      keyword in Visual mode.
+                                                                             
+  If there is more than one entry with the same name, you can jump to next
+  entry by using "K" on the keyword.
+                                                                             
+                                                                             
+Options: -------------------------------------------------------------- {{{1
+  g:gauref_file:
+    The file name of Gauche reference manual.
+                                                                             
+  g:gauref_key_lookup:
+    The key which is mapped to look up the keyword under the cursor or
+    selected.
+
